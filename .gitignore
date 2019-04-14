@@ -1,0 +1,10 @@
+*.log
+.idea
+*.iml
+target
+target/
+maven-output
+classes/
+out
+.idea/
+*.classpath
