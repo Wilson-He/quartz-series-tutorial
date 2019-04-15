@@ -1,8 +1,8 @@
 package io.github.quartz;
 
+import com.alibaba.fastjson.JSONObject;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
 
 /**
  * HelloJob
@@ -13,7 +13,12 @@ import org.quartz.JobExecutionException;
 public class HelloJob implements Job {
     @Override
     public void execute(JobExecutionContext context) {
-        System.out.println(context.getTrigger().getJobKey());
         System.out.println("Hello Job");
+        JSONObject merged = new JSONObject();
+        context.getMergedJobDataMap().forEach(merged::put);
+        System.out.println(merged);
+        JSONObject jobMap = new JSONObject();
+        context.getMergedJobDataMap().forEach(jobMap::put);
+        System.out.println("jobMap: " + jobMap);
     }
 }
