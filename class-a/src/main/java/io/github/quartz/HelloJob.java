@@ -12,7 +12,7 @@ import org.quartz.JobExecutionException;
  */
 public class HelloJob implements Job {
     @Override
-    public void execute(JobExecutionContext context) throws JobExecutionException {
+    public void execute(JobExecutionContext context) {
         System.out.println(context.getTrigger().getJobKey());
         System.out.println("Hello Job");
     }
