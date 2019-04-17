@@ -18,25 +18,26 @@ public class HelloJobApp {
         HolidayCalendar excludeCalendar = new HolidayCalendar();
         excludeCalendar.addExcludedDate(new Date());
         scheduler.start();
-        JobDetail jobDetail = JobBuilder.newJob()
-                .ofType(HelloJob.class)
-                .withIdentity("class-a-detail", "group1")
-                .usingJobData("age","18")
-                .usingJobData("name","Coco")
-                .build();
         Trigger triggerA = TriggerBuilder.newTrigger()
-                .forJob(jobDetail)
                 .startAt(DateBuilder.futureDate(5, DateBuilder.IntervalUnit.SECOND))
-                .withIdentity("class-a-detail","group")
-                .forJob(jobDetail)
+                .withIdentity("class-a-detail","group2")
+                .forJob("class-a-detail","group1")
                 .usingJobData("name", "Wilson")
                 .usingJobData("sex", "man")
-                .modifiedByCalendar("excludeNow")
+//                .modifiedByCalendar("excludeNow")
                 .withSchedule(SimpleScheduleBuilder.simpleSchedule()
                         .withIntervalInSeconds(2)
                         .withRepeatCount(3))
                 .build();
-        scheduler.scheduleJob(jobDetail, triggerA);
+        JobDetail jobDetail = JobBuilder.newJob()
+                .ofType(HelloJob.class)
+                .storeDurably()
+                .withIdentity("class-a-detail", "group1")
+                .usingJobData("age","18")
+                .usingJobData("name","Coco")
+                .build();
+        scheduler.addJob(jobDetail,true);
+        scheduler.scheduleJob(triggerA);
         // 睡眠3秒，否则Trigger不会触发的情况会报错
         Thread.sleep(3000);
         // 添加Calendar限制并更新关联的Trigger

@@ -1,0 +1,109 @@
+{
+  "properties": [
+    {
+      "name": "spring.quartz.properties.org.quartz.scheduler.instance-name",
+      "type": "java.lang.String",
+      "description": "Additional Quartz Scheduler properties.",
+      "sourceType": "org.springframework.boot.autoconfigure.quartz.QuartzProperties$properties"
+    },
+    {
+      "name": "spring.quartz.properties.org.quartz.scheduler.rmi.export",
+      "type": "java.lang.Boolean",
+      "description": "Additional Quartz Scheduler properties.",
+      "sourceType": "org.springframework.boot.autoconfigure.quartz.QuartzProperties$properties"
+    },
+    {
+      "name": "spring.quartz.properties.org.quartz.scheduler.rmi.proxy",
+      "type": "java.lang.Boolean",
+      "description": "Additional Quartz Scheduler properties.",
+      "sourceType": "org.springframework.boot.autoconfigure.quartz.QuartzProperties$properties"
+    },
+    {
+      "name": "spring.quartz.properties.org.quartz.scheduler.wrap-job-execution-in-user-transaction",
+      "type": "java.lang.Boolean",
+      "description": "Additional Quartz Scheduler properties.",
+      "sourceType": "org.springframework.boot.autoconfigure.quartz.QuartzProperties$properties"
+    },
+    {
+      "name": "spring.quartz.properties.org.quartz.threadPool.class",
+      "type": "java.lang.Class<? extends org.quartz.spi.ThreadPool>",
+      "description": "Additional Quartz Scheduler properties.",
+      "sourceType": "org.springframework.boot.autoconfigure.quartz.QuartzProperties$properties"
+    },
+    {
+      "name": "spring.quartz.properties.org.quartz.threadPool.thread-count",
+      "type": "java.lang.Integer",
+      "description": "Additional Quartz Scheduler properties.",
+      "sourceType": "org.springframework.boot.autoconfigure.quartz.QuartzProperties$properties"
+    },
+    {
+      "name": "spring.quartz.properties.org.quartz.threadPool.thread-priority",
+      "type": "java.lang.Integer",
+      "description": "Additional Quartz Scheduler properties.",
+      "sourceType": "org.springframework.boot.autoconfigure.quartz.QuartzProperties$properties"
+    },
+    {
+      "name": "spring.quartz.properties.org.quartz.threadPool.threads-inherit-context-class-loader-of-initializingthread",
+      "type": "java.lang.Boolean",
+      "description": "Additional Quartz Scheduler properties.",
+      "sourceType": "org.springframework.boot.autoconfigure.quartz.QuartzProperties$properties"
+    },
+    {
+      "name": "spring.quartz.properties.org.quartz.job-store.class",
+      "type": "java.lang.Class<? extends org.quartz.spi.JobStore>",
+      "description": "Additional Quartz Scheduler properties.",
+      "sourceType": "org.springframework.boot.autoconfigure.quartz.QuartzProperties$properties"
+    },
+    {
+      "name": "spring.quartz.properties.org.quartz.job-store.driver-delegate-class",
+      "type": "java.lang.Class<? extends org.quartz.impl.jdbcjobstore.DriverDelegate>",
+      "description": "Additional Quartz Scheduler properties.",
+      "sourceType": "org.springframework.boot.autoconfigure.quartz.QuartzProperties$properties"
+    },
+    {
+      "name": "spring.quartz.properties.org.quartz.job-store.table-prefix",
+      "type": "java.lang.String",
+      "description": "Additional Quartz Scheduler properties.",
+      "sourceType": "org.springframework.boot.autoconfigure.quartz.QuartzProperties$properties"
+    },
+    {
+      "name": "spring.quartz.properties.org.quartz.job-store.is-clustered",
+      "type": "java.lang.Boolean",
+      "description": "Additional Quartz Scheduler properties.",
+      "sourceType": "org.springframework.boot.autoconfigure.quartz.QuartzProperties$properties"
+    },
+    {
+      "name": "spring.quartz.properties.org.quartz.job-store.cluster-checkin-interval",
+      "type": "java.lang.Integer",
+      "description": "Additional Quartz Scheduler properties.",
+      "sourceType": "org.springframework.boot.autoconfigure.quartz.QuartzProperties$properties"
+    },
+    {
+      "name": "spring.quartz.properties.org.quartz.job-store.use-properties",
+      "type": "java.lang.Boolean",
+      "description": "Additional Quartz Scheduler properties.",
+      "sourceType": "org.springframework.boot.autoconfigure.quartz.QuartzProperties$properties"
+    },
+    {
+      "name": "spring.quartz.properties.org.quartz.job-store.table-prefix",
+      "type": "java.lang.String",
+      "description": "Additional Quartz Scheduler properties.",
+      "sourceType": "org.springframework.boot.autoconfigure.quartz.QuartzProperties$properties"
+    }
+  ],
+  "hints": [
+    {
+      "name": "spring.quartz.properties.keys",
+      "values": [
+        {
+          "value": "spring.quartz.jdbc.schema.properties.org.quartz.job-store.table-prefix",
+          "description": "Root logger used to assign the default logging level."
+        },
+        {
+          "value": "spring.quartz.jdbc.schema.properties.org.quartz.job-store.is-clustered",
+          "description": "spring.quartz.jdbc.schema.properties.org.quartz.job-store.is-clustered"
+        }
+      ]
+    }
+  ]
+}

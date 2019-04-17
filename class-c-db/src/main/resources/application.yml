@@ -1,0 +1,11 @@
+spring:
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      schema: quartz
+    properties:
+      org:
+        quartz:
+          job-store:
+            table-prefix: custom
+

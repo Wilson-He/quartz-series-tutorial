@@ -14,6 +14,7 @@ public class HelloJob implements Job {
     @Override
     public void execute(JobExecutionContext context) {
         System.out.println("Hello Job");
+        System.out.println("trigger:" + context.getTrigger().getKey().getName());
         JSONObject merged = new JSONObject();
         context.getMergedJobDataMap().forEach(merged::put);
         System.out.println(merged);
